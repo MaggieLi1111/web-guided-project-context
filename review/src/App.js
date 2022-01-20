@@ -26,25 +26,13 @@ const SubComp1 = () => {
             state: "PA",
             postcode: "19191"
         }));
-
-        // setPerson({
-        //     ...person,
-        //     location: {
-        //         street: "3333 N 33rd Street",
-        //         city: "Philadelphia",
-        //         state: "PA",
-        //         postcode: "19191"
-        //     }
-        // });
     }
 
-    console.log(person);
-    
     return(<div className="component">
         <h1>Sub Comp 1</h1>
         <h2>{person.name.title} {person.name.first} {person.name.last}</h2>
         <button onClick={handleClick}>Change Location</button>
-        {/* <SubComp2/> */}
+        <SubComp2/>
     </div>)
 }
 
@@ -57,6 +45,7 @@ const SubComp2 = () => {
 
 const SubComp3 = () => {
     const {person, setPerson} = useContext(PersonContext);
+    
 
     const handleClick = ()=> {
         setPerson({
