@@ -5,16 +5,21 @@ const App = ()=> {
     const [person, setPerson] = useState(data);
     return(<div className="App component">
         <h1>Main App</h1>
-        <SubComp1 person={person}/>
+        <SubComp1 person={person} setPerson={setPerson}/>
     </div>);
 };
 
 const SubComp1 = (props) => {
-    const { person } = props;
+    const { person, setPerson } = props;
     
+    const handleClick = () => {
+        
+    }
+
     return(<div className="component">
         <h1>Sub Comp 1</h1>
         <h2>{person.name.title} {person.name.first} {person.name.last}</h2>
+        <button onClick={handleClick}>Change Location</button>
         <SubComp2 person={person}/>
     </div>)
 }
