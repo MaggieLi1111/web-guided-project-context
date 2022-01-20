@@ -13,7 +13,7 @@ const App = ()=> {
     </div>);
 };
 
-const SubComp1 = (props) => {
+const SubComp1 = () => {
     const [ person, setPerson ] = useContext(PersonContext);
     
     const handleClick = () => {
@@ -28,21 +28,18 @@ const SubComp1 = (props) => {
         });
     }
 
-    console.log(person);
-    
     return(<div className="component">
         <h1>Sub Comp 1</h1>
         <h2>{person.name.title} {person.name.first} {person.name.last}</h2>
         <button onClick={handleClick}>Change Location</button>
-        {/* <SubComp2 person={person} setPerson={setPerson}/> */}
+        <SubComp2/>
     </div>)
 }
 
-const SubComp2 = (props) => {
-    const { person, setPerson } = props;
+const SubComp2 = () => {
     return(<div className="component">
         <h1>Sub Comp 2</h1>
-        <SubComp3 person={person} setPerson={setPerson}/>
+        <SubComp3 />
     </div>)
 }
 
