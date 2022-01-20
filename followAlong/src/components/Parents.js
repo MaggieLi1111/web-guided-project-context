@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import FamilyContext from './../contexts/FamilyContext';
 
-const Parents = props => {
+const Parents = () => {
+  const family = useContext(FamilyContext);
+  
   return (
     <section className="parents">
       {props.family.parents.map(p => (
