@@ -6,4 +6,10 @@ const App = ()=> {
     </div>);
 };
 
+const SubComp1 = () => {
+    return(<div className="component">
+        <h1>Sub Comp 1</h1>
+    </div>)
+}
+
 export default App;
