@@ -28,6 +28,8 @@ const SubComp1 = (props) => {
         });
     }
 
+    console.log(person);
+    
     return(<div className="component">
         <h1>Sub Comp 1</h1>
         <h2>{person.name.title} {person.name.first} {person.name.last}</h2>
