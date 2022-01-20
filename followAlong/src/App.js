@@ -11,7 +11,6 @@ export default function App() {
   const [families] = useState(data);
   const [activeFamily, setActiveFamily] = useState(families[0]);
 
-  const name="adaf";
   return (
     <div className="App">
       <section className="header">
@@ -29,7 +28,7 @@ export default function App() {
       </section>
       
       <FamilyContext.Provider value={activeFamily}>
-        {activeFamily && <FamilyTree />}  
+        {activeFamily && <FamilyTree />}
       </FamilyContext.Provider>
     </div>
   );
