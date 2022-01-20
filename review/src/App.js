@@ -43,8 +43,8 @@ const SubComp2 = () => {
     </div>)
 }
 
-const SubComp3 = (props) => {
-    const { person, setPerson } = props;
+const SubComp3 = () => {
+    const [person, setPerson] = useContext(PersonContext);
 
     const handleClick = ()=> {
         setPerson({
