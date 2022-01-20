@@ -1,11 +1,11 @@
-import React, { useState, createContext } from "react";
+import React, { useState } from "react";
 
 import { data } from "./data";
 
+import FamilyContext from './contexts/FamilyContext';
+
 import FamilyTree from "./components/FamilyTree";
 import "./styles.scss";
-
-export const FamilyContext = createContext();
 
 export default function App() {
   const [families] = useState(data);
