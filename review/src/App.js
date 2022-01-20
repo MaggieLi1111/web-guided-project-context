@@ -66,6 +66,7 @@ const SubComp3 = () => {
 
     return(<div className="component">
         <h1>Sub Comp 3</h1>
+        <p>{highSchoolName}</p>
         <h2>{person.location.street} {person.location.city}, {person.location.state} {person.location.postcode}</h2>
         <button onClick={handleClick}>Change Name</button>
     </div>)
