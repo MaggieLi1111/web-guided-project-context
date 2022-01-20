@@ -6,8 +6,10 @@ const PersonContext = createContext();
 const App = ()=> {
     const [person, setPerson] = useState(data);
     return(<div className="App component">
-        <h1>Main App</h1>
-        <SubComp1 person={person} setPerson={setPerson}/>
+        <PersonContext value={[person, setPerson]}>
+            <h1>Main App</h1>
+            <SubComp1 person={person} setPerson={setPerson}/>
+        </PersonContext>
     </div>);
 };
 
