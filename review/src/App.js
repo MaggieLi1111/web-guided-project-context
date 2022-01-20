@@ -13,7 +13,10 @@ const SubComp1 = (props) => {
     const { person, setPerson } = props;
     
     const handleClick = () => {
-        
+        setPerson({
+            ...person,
+            
+        });
     }
 
     return(<div className="component">
