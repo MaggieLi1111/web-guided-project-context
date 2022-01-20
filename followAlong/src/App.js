@@ -28,7 +28,7 @@ export default function App() {
       </section>
       
       <FamilyContext.Provider value={activeFamily}>
-        {activeFamily && <FamilyTree family={activeFamily} />}
+        {activeFamily && <FamilyTree />}
       </FamilyContext.Provider>
     </div>
   );
