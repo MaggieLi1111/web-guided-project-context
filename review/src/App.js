@@ -15,11 +15,12 @@ const SubComp1 = (props) => {
     return(<div className="component">
         <h1>Sub Comp 1</h1>
         <h2>{person.name.title} {person.name.first} {person.name.last}</h2>
-        <SubComp2/>
+        <SubComp2 person={person}/>
     </div>)
 }
 
-const SubComp2 = () => {
+const SubComp2 = (props) => {
+    const { person } = props;
     return(<div className="component">
         <h1>Sub Comp 2</h1>
         <SubComp3/>
