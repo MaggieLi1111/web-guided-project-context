@@ -12,7 +12,9 @@ const App = ()=> {
     return(<div className="App component">
         <PersonContext.Provider value={{person, setPerson}}>
             <h1>Main App</h1>
-            <SubComp1 />
+            <SchoolContext.Provider value={"Cool High School"}>
+                <SubComp1 />
+            </SchoolContext.Provider>
         </PersonContext.Provider>
     </div>);
 };
@@ -49,6 +51,7 @@ const SubComp2 = () => {
 
 const SubComp3 = () => {
     const {person, setPerson} = useContext(PersonContext);
+    const highSchoolName = useContext(SchoolContext);
 
     const handleClick = ()=> {
         setPerson({
