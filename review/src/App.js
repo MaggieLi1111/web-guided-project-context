@@ -23,11 +23,14 @@ const SubComp2 = (props) => {
     const { person } = props;
     return(<div className="component">
         <h1>Sub Comp 2</h1>
-        <SubComp3/>
+        <SubComp3 person={person}/>
     </div>)
 }
 
-const SubComp3 = () => {
+const SubComp3 = (props) => {
+    const { person } = props;
+    console.log(person);
+    
     return(<div className="component">
         <h1>Sub Comp 3</h1>
     </div>)
