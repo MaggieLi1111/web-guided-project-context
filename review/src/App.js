@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useContext } from 'react';
 import data from './data';
 
 const PersonContext = createContext();
@@ -6,10 +6,10 @@ const PersonContext = createContext();
 const App = ()=> {
     const [person, setPerson] = useState(data);
     return(<div className="App component">
-        <PersonContext value={[person, setPerson]}>
+        <PersonContext.Provider value={[person, setPerson]}>
             <h1>Main App</h1>
-            <SubComp1 person={person} setPerson={setPerson}/>
-        </PersonContext>
+            <SubComp1 />
+        </PersonContext.Provider>
     </div>);
 };
 
