@@ -2,21 +2,15 @@ import React, { useState, createContext, useContext } from 'react';
 import data from './data';
 
 const PersonContext = createContext();
-const SchoolContext = createContext();
 
 const App = ()=> {
     const [person, setPerson] = useState(data);
     
-    const users = [];
-
     return(<div className="App component">
         <PersonContext.Provider value={{person, setPerson}}>
             <h1>Main App</h1>
             <SubComp1 />
         </PersonContext.Provider>
-        <SchoolContext.Provider>
-            <SubComp1 />
-        </SchoolContext.Provider>
     </div>);
 };
 
