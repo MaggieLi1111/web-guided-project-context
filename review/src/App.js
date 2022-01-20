@@ -6,7 +6,7 @@ const PersonContext = createContext();
 const App = ()=> {
     const [person, setPerson] = useState(data);
     return(<div className="App component">
-        <PersonContext.Provider value={[person, setPerson, "Warren"]}>
+        <PersonContext.Provider value={[person, setPerson]}>
             <h1>Main App</h1>
             <SubComp1 />
         </PersonContext.Provider>
@@ -59,7 +59,6 @@ const SubComp3 = () => {
 
     return(<div className="component">
         <h1>Sub Comp 3</h1>
-        {example}
         <h2>{person.location.street} {person.location.city}, {person.location.state} {person.location.postcode}</h2>
         <button onClick={handleClick}>Change Name</button>
     </div>)
