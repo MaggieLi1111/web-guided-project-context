@@ -28,20 +28,24 @@ const SubComp1 = (props) => {
         <h1>Sub Comp 1</h1>
         <h2>{person.name.title} {person.name.first} {person.name.last}</h2>
         <button onClick={handleClick}>Change Location</button>
-        <SubComp2 person={person}/>
+        <SubComp2 person={person} setPerson={setPerson}/>
     </div>)
 }
 
 const SubComp2 = (props) => {
-    const { person } = props;
+    const { person, setPerson } = props;
     return(<div className="component">
         <h1>Sub Comp 2</h1>
-        <SubComp3 person={person}/>
+        <SubComp3 person={person} setPerson={setPerson}/>
     </div>)
 }
 
 const SubComp3 = (props) => {
-    const { person } = props;
+    const { person, setPerson } = props;
+
+    const handleClick = ()=> {
+
+    }
 
     return(<div className="component">
         <h1>Sub Comp 3</h1>
