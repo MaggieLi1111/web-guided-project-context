@@ -12,10 +12,11 @@ const App = ()=> {
     return(<div className="App component">
         <PersonContext.Provider value={{person, setPerson}}>
             <h1>Main App</h1>
-            <SchoolContext.Provider value={"Cool High School"}>
-                <SubComp1 />
-            </SchoolContext.Provider>
+            <SubComp1 />
         </PersonContext.Provider>
+        <SchoolContext.Provider>
+            <SubComp1 />
+        </SchoolContext.Provider>
     </div>);
 };
 
