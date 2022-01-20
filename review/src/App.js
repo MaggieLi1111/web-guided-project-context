@@ -5,6 +5,9 @@ const PersonContext = createContext();
 
 const App = ()=> {
     const [person, setPerson] = useState(data);
+    
+    const users = [];
+
     return(<div className="App component">
         <PersonContext.Provider value={[person, setPerson]}>
             <h1>Main App</h1>
