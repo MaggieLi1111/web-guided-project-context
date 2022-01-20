@@ -44,7 +44,14 @@ const SubComp3 = (props) => {
     const { person, setPerson } = props;
 
     const handleClick = ()=> {
-
+        setPerson({
+            ...person,
+            name: {
+                title: "Mx",
+                first: "Person",
+                last: "Person"
+            }
+        });
     }
 
     return(<div className="component">
