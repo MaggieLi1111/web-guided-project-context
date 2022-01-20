@@ -2,6 +2,7 @@ import React, { useState, createContext, useContext } from 'react';
 import data from './data';
 
 const PersonContext = createContext();
+const SchoolContext = createContext();
 
 const App = ()=> {
     const [person, setPerson] = useState(data);
