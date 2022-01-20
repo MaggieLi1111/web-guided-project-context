@@ -6,10 +6,10 @@ import { setName, setLocation} from './reducer';
 const PersonContext = createContext();
 
 const App = ()=> {
-    const [person, setPerson] = useState(data);
+    const [person, dispatch] = useReducer(reducer, initialState);
     
     return(<div className="App component">
-        <PersonContext.Provider value={{person, setPerson}}>
+        <PersonContext.Provider value={{person, dispatch}}>
             <h1>Main App</h1>
             <SubComp1 />
         </PersonContext.Provider>
@@ -17,7 +17,7 @@ const App = ()=> {
 };
 
 const SubComp1 = () => {
-    const { person, setPerson } = useContext(PersonContext);
+    const { person, dispatch } = useContext(PersonContext);
     
     const handleClick = () => {
         setPerson({
