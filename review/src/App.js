@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, createContext } from 'react';
 import data from './data';
+
+const PersonContext = createContext();
 
 const App = ()=> {
     const [person, setPerson] = useState(data);
