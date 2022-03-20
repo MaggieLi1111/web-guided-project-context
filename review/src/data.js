@@ -1,9 +1,9 @@
 export default {
   gender: "male",
   name: {
-    title: "mr",
-    first: "brad",
-    last: "gibson"
+    title: "Mr",
+    first: "Brad",
+    last: "Gibson"
   },
   location: {
     street: "9278 new road",
